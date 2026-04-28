@@ -155,6 +155,7 @@ function contar($inicio = 1, $fin = 10, $paso = 1) {
     }
 } 
 
+// Input usuario
 echo "Dime el numero de inicio: ";
 $inicio = (int) fgets(STDIN);
 
@@ -170,5 +171,27 @@ $paso = (int) fgets(STDIN);
 // Llamada a la función
 contar($inicio, $fin, $paso);
 
+
+//EJERCICIO 5
+
+function calcularGrado($nota) {
+
+    if ($nota >= 60) {
+        return "Primera División";
+    } elseif ($nota >= 45 && $nota <= 59) {
+        return "Segunda División";
+    } elseif ($nota >= 33 && $nota <= 44) {
+        return "Tercera División";
+    } else {
+        return "Reprobado";
+    }
+}
+
+// Input usuario
+echo "Ingresa la nota del/ la estudiante: ";
+$nota = (int) fgets(STDIN);
+
+// Llamada a la función
+echo "El grado del estudiante es: " . calcularGrado($nota) . "\n";
 
 ?>
