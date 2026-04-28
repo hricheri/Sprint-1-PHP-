@@ -194,4 +194,19 @@ $nota = (int) fgets(STDIN);
 // Llamada a la función
 echo "El grado del estudiante es: " . calcularGrado($nota) . "\n";
 
+
+//EJERCICIO 6
+
+function isBitten() {
+    // genera 0 o 1 aleatoriamente
+    $numero = rand(0, 1);
+
+    if ($numero === 1) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
 ?>
