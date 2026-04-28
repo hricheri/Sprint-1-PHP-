@@ -108,7 +108,7 @@ echo "Producto total = " . ($intX * $intY * $doubleN * $doubleM) . "\n";
 echo "Elije el primer numero";
 $num1 = (int) fgets(STDIN);
 
-echo "Dime el segundo numero: ";
+echo "Elije el segundo numero: ";
 $num2 = (int) fgets(STDIN);
 
 echo "Dime la operacion:\n";
@@ -144,4 +144,31 @@ function calcular($num1, $num2, $operacion) {
             return "Operación no válida";
     }
 }
+
+
+//EJERCICIO 4
+
+function contar($inicio = 1, $fin = 10, $paso = 1) {
+
+    for ($i = $inicio; $i <= $fin; $i += $paso) {
+        echo $i . "\n";
+    }
+} 
+
+echo "Dime el numero de inicio: ";
+$inicio = (int) fgets(STDIN);
+
+echo "Dime hasta que numero quieres contar (ENTER para 10): ";
+$inputFin = trim(fgets(STDIN));
+
+// Si el usuario no escribe nada, se usa el default
+$fin = ($inputFin === "") ? 10 : (int)$inputFin;
+
+echo "De cuanto en cuanto quieres contar? (1, 2, 3...): ";
+$paso = (int) fgets(STDIN);
+
+// Llamada a la función
+contar($inicio, $fin, $paso);
+
+
 ?>
